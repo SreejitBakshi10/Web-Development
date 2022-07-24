@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    margin: 0px 5px 0px 10px;
+}
+
+h1
+{
+    text-align: center;
+    margin: 30px 0px 20px 0px;
+}
+
+h3
+{
+    float: right;
+    text-align: center;
+    width: 40%;
+    padding: 1px 20px 1px 20px;
+    border: 1px solid black;
+}
+
+div
+{
+    width: 100%;
+}
+
+section
+{
+    float: left;
+    margin-bottom: 20px;
+}
+
+.space1,.space2,.space3
+{
+    border: 1px solid black;
+    background-color: rgba(128, 128, 128, 0.571);
+    height: fit-content;
+    width: 90%;
+    margin: 0px 20px 0px 20px;
+}
+
+p
+{
+    padding: 37px 10px 10px 10px;
+    font-size: 85%;
+}
+
+.cat1
+{
+    background-color: rgb(236, 94, 141);
+}
+
+.cat2
+{
+    background-color: rgb(199, 111, 111);
+    color: white;
+}
+
+.cat3
+{
+    background-color: rgb(244, 244, 133);
+}
+
+@media (min-width: 992px)
+{
+    .Chicken,.Beef,.Sushi
+    {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) 
+{
+    .Chicken,.Beef
+    {
+        width: 50%;
+    }
+    .Sushi
+    {
+        width: 100%;
+    }
+    .space3
+    {
+        width: 95%;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .Chicken,.Beef,.Sushi
+    {
+        width: 100%;
+    }
+    .space1,.space2,.space3
+    {
+        width: 93%;
+    }
+}
