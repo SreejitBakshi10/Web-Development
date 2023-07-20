@@ -7,7 +7,7 @@ a
     text-decoration: none;
     color: black;
 }
-li
+ul,ol
 {
     margin: 5px;
     font-size: 120%;
