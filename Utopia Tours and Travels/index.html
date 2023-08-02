@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="gallery/icon.png" type="image/x-icon">
+    <title>Utopia Tours & Travels</title>
+</head>
+<body>
+    <!--===============Banner================-->
+    <header id="top"><navigation-bar></navigation-bar></header>
+    
+    <section class="banner">
+        <div class="banner-text-item">
+            <div class="banner-heading">
+                <h1>Keep calm and travel ON!</h1>
+            </div>
+            <form class="form">
+                <input type="text" id="destinationInput" list="mylist" placeholder="Where would you like to go?">
+                <datalist id="mylist">
+                    <option>Bali</option>
+                    <option>Bangkok</option>
+                    <option>Dubai</option>
+                    <option>Egypt</option>
+                    <option>Iceland</option>
+                    <option>Jammu and Kashmir</option>
+                    <option>Maldives</option>
+                    <option>Paris</option>
+                </datalist>
+                <button type="submit" class="search">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <top-button></top-button>
+    <!--===========Footer=================-->
+    <footer><footer-component></footer-component></footer>
+    
+    <script src="components.js"></script>
+    <script>
+        document.querySelector('.form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            const destinationInput = document.getElementById('destinationInput').value;
+            const url = 'locations.html#' + destinationInput; // Append the input value as a hash in the URL
+
+            // Redirect to the locations.html page with the section ID in the URL
+            window.location.href = url;
+        });
+    </script>
+</body>
+</html>

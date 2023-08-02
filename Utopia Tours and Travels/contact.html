@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="gallery/icon.png" type="image/x-icon">
+    <title>Contact Us</title>
+</head>
+<body>
+    <!--===============Banner================-->
+    <header><navigation-bar></navigation-bar></header>
+    
+    <section class="contact-us">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>
+                Have a question, a suggestion, or just want to say hello? We'd love to hear from you!
+                Feel free to get in touch with our friendly team, and we'll be delighted to assist you.
+            </p>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Enter your name" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter your email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Enter your message" name="message" rows="4" required></textarea>
+
+                <button type="submit" onclick="myFunction()">Send Message</button>
+            </form>
+            <div class="contact-details">
+                <a href="tel:+911234567890"><img src="gallery/call.png"></a>
+                <a href="mailto:info@utopia.com"><img src="gallery/mail.png"></a>
+                <a href="https://www.favebook.com/utopiatoursandtravels"><img src="gallery/facebook.png"></a>
+                <a href="https://www.instagram.com/utopiatoursandtravels"><img src="gallery/instagram.png"></a>
+                <a href="https://www.twitter.com/utopiatoursandtravels"><img src="gallery/twitter.png"></a>
+                <a href="https://www.youtube.com/utopiatoursandtravels"><img src="gallery/youtube.png"></a>
+            </div>
+        </div>
+    </section>
+    
+    <!--===========Footer=================-->
+    <footer><footer-component></footer-component></footer>
+    
+    <script src="components.js"></script>
+    <script>function myFunction() { alert("Thank You for your message 😊❤️"); }</script>
+</body>
+</html>
