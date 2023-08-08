@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Library</title>
+    <!-- CSS Link {Start}-->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- ------------------------------------ -->
+
+    <!-- Swiper JS Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- ------------------------------------ -->
+
+    <!-- Favicon {Start} -->
+    <link rel="shortcut icon" type="image/png" href="image/book-solid-24.png" />
+    <!-- ------------------------------------ -->
+
+    <!-- Font Awesome CDN {Start} -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- ------------------------------------ -->
+  </head>
+  <body>
+    <!-- Header Section Starts Here -->
+    <header class="header">
+      <div class="header-1">
+        <a href="" class="logo"><i class="fas fa-book"></i> E-Library </a>
+        <form action="#" class="search-form">
+          <input
+            type="search"
+            name=""
+            placeholder="search here"
+            id="search-box"
+          />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="icons">
+          <div id="search-btn" class="fas fa-search"></div>
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-shopping-cart"></a>
+          <div id="login-btn" class="fas fa-user"></div>
+        </div>
+      </div>
+
+      <div class="header-2">
+        <nav class="navbar">
+          <a href="#home">Home</a>
+          <a href="#featured">featured</a>
+          <a href="#arrivals">arrivals</a>
+          <a href="#deals">deals</a>
+          <a href="#contact">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Header Section Ends Here -->
+    <!-- Bottom Navbar Starts Here -->
+
+    <nav class="bottom-navbar">
+      <a href="#home" class="fas fa-home"></a>
+      <a href="#featured" class="fas fa-list"></a>
+      <a href="#arrivals" class="fas fa-tags"></a>
+      <a href="#reviews" class="fas fa-comments"></a>
+    </nav>
+
+    <!-- Bottom Navbar Ends Here -->
+
+    <!-- Login Form -->
+    <div class="login-form-container">
+      <div id="close-login-btn"><i class="fas fa-times"></i></div>
+      <form action="">
+        <h3>sign in</h3>
+        <span>username</span>
+        <input
+          type="email"
+          name=""
+          class="box"
+          placeholder="enter your email"
+          id=""
+        />
+        <span>password</span>
+        <input
+          type="email"
+          name=""
+          class="box"
+          placeholder="enter your password"
+          id=""
+        />
+        <div class="checkbox">
+          <input type="checkbox" name="" id="remember-me" />
+          <label for="remember-me">remember me?</label>
+        </div>
+        <input type="submit" value="sign in" class="btn" />
+        <p>forget password ? <a href="#">Click Here!</a></p>
+        <p>don't have an account ? <a href="#">Create one!</a></p>
+      </form>
+    </div>
+    <!-- ---------------------------------- -->
+
+    <!-- Home Section Start Here -->
+    <section class="home" id="#home">
+      <div class="row">
+        <div class="content">
+          <h3>upto 80% off</h3>
+          <p>
+            India’s Largest and Cheapest Online Bookstore offering 40+ Million selections.
+          </p>
+          <a href="#" class="btn">shop now</a>
+        </div>
+        <div class="swiper books-slider">
+          <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide"
+              ><img src="image/book1.jpg" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book2.jpg" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book3.jpg" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book4.jpg" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book5.jpg" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book6.jpg" alt=""
+            /></a>
+          </div>
+          <img src="image/stand.png" class="stand" />
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------------------------------- -->
+
+    <!-- Icons Section {Starts Here} -->
+    <section class="icons-container">
+      <div class="icons">
+        <i class="fas fa-paper-plane"></i>
+        <div class="content">
+          <h3>free shipping</h3>
+          <p>order over ₹299</p>
+        </div>
+      </div>
+      <div class="icons">
+        <i class="fas fa-lock"></i>
+        <div class="content">
+          <h3>secure payment</h3>
+          <p>100 secure payment</p>
+        </div>
+      </div>
+      <div class="icons">
+        <i class="fas fa-redo-alt"></i>
+        <div class="content">
+          <h3>easy returns</h3>
+          <p>10 days return policy</p>
+        </div>
+      </div>
+      <div class="icons">
+        <i class="fas fa-headset"></i>
+        <div class="content">
+          <h3>24/7 support</h3>
+          <p>call us anytime</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icons Section {Ends Here} -->
+
+    <!-- Featured Section {Starts Here} -->
+    <section class="featured" id="featured">
+      <h1 class="heading"><span>featured books</span></h1>
+      <div class="swiper featured-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-search"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img src="image/book1.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>featured books</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-search"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img src="image/book2.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>featured books</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-search"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img src="image/book3.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>featured books</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-search"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img src="image/book4.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>featured books</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-search"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img src="image/book5.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>featured books</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-search"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img src="image/book6.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>featured books</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <!-- Featured Section {Ends Here} -->
+
+    <!-- Newsletter Section {Starts Here} -->
+    <section class="newsletter">
+      <form action="">
+        <h3>subscribe for latest updates</h3>
+        <input
+          type="email"
+          name=""
+          placeholder="enter your email"
+          id=""
+          class="box"
+        />
+        <input type="submit" value="subscribe" class="btn" />
+      </form>
+    </section>
+    <!-- Newsletter Section {Ends Here} -->
+
+    <!-- Arrivals Section {Starts Here} -->
+    <section class="arrivals" id="arrivals">
+      <h1 class="heading"><span>new arrivals</span></h1>
+      <div class="swiper arrivals-slider">
+        <div class="swiper-wrapper">
+          <a href="#" class="swiper-slide box">
+            <div class="image">
+              <img src="image/book1.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>new arrivals</h3>
+              <div class="price">₹299 <span>$₹369</span></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide box">
+            <div class="image">
+              <img src="image/book2.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>new arrivals</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide box">
+            <div class="image">
+              <img src="image/book3.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>new arrivals</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide box">
+            <div class="image">
+              <img src="image/book4.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>new arrivals</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide box">
+            <div class="image">
+              <img src="image/book5.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>new arrivals</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide box">
+            <div class="image">
+              <img src="image/book6.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>new arrivals</h3>
+              <div class="price">₹299 <span>₹369</span></div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Arrivals Section {Ends Here} -->
+
+    <!-- Deals Section {Stars Here} -->
+    <section class="deal" id="deal">
+      <div class="content">
+        <h3>deal of the day</h3>
+        <h1>upto 50% off</h1>
+        <p>
+          India’s Largest and Cheapest Online Bookstore offering 40+ Million selections.
+        </p>
+        <a href="#" class="btn">shop now</a>
+      </div>
+      <div class="image">
+        <img src="image/deal.jpg" alt="" />
+      </div>
+    </section>
+    <!-- Deals Section {Ends Here} -->
+
+    <!-- Footer Section {Starts Here} -->
+    <section class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>our locations</h3>
+          <a href="#"><i class="fas fa-map-marker-alt"></i>india</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i>USA</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i>russia</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i>france</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i>japan</a>
+        </div>
+
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>home</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>featured</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>arrivals</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>deals</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>contact</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>account info</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>ordered items</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>privacy policy</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>payment method</a>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i>our services</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"><i class="fa-solid fa-phone"></i>+91-8728739912</a>
+          <a href="#"><i class="fa-solid fa-envelope"></i>elibrary@gmail.com</a>
+          <img src="image/world_map.jpg" alt="" class="map" />
+        </div>
+      </div>
+      <div class="credit">
+        <span>All rights reserved 2023-2024</span>
+      </div>
+    </section>
+    <!-- Footer Section {Ends Here} -->
+
+    <!-- Swiper JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- ------------------------------------ -->
+    <!-- Javascript Link {Start} -->
+    <script src="script.js"></script>
+    <!-- ------------------------------------ -->
+  </body>
+</html>
