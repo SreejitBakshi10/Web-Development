@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        body
+        {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        form 
+        {
+            width: 35%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #fffc33 0%, #ff99c4 100%);  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        div 
+        {
+            margin-bottom: 20px;
+        }
+
+        label 
+        {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],input[type="email"],input[type="date"],textarea
+        {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],input[type="checkbox"]
+        {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        button 
+        {
+            padding: 10px 0px 10px 0px;
+            border: none;
+            border-radius: 5px;
+            width: 45%;
+            background-color: rgb(70, 70, 255);
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover 
+        {
+            background-color: rgb(0, 0, 225);
+        }
+
+        button[type="reset"] 
+        {
+            background-color: rgb(255, 70, 70);
+            margin-left: 10px;
+        }
+
+        button[type="reset"]:hover 
+        {
+            background-color: rgb(225, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <form method="post" autocomplete="off">
+        <div>
+            <label for="fname">First Name: </label>
+            <input type="text" id="fname" name="fname" maxlength="50" placeholder="Enter your first name">
+        </div>
+
+        <div>
+            <label for="lname">Last Name: </label>
+            <input type="text" id="lname" name="lname" maxlength="50" placeholder="Enter your last name">
+        </div>
+        
+        <div>
+            <label for="email">E-mail ID: </label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email ID">
+        </div>
+
+        <div>
+            <label for="mobile">Mobile Number: </label>
+            <input type="text" id="mobile" name="mobile" maxlength="10" placeholder="Enter your mobile number">
+        </div>
+        
+        <div>
+            <label>Gender: </label>
+            
+            <br><input type="radio" id="male" name="gender" value="Male">
+            <label for="male">MALE</label>
+            
+            <br><input type="radio" id="female" name="gender" value="Female">
+            <label for="female">FEMALE</label>
+            
+            <br><input type="radio" id="other" name="gender" value="Other">
+            <label for="other">OTHER</label>
+        </div>
+
+        <div>
+            <label for="DOB">Date of Birth: </label>
+            <input type="date" id="DOB" name="DOB">
+        </div>
+
+        <div>
+            <label for="address">Address: </label>
+            <textarea id="address" name="address" maxlength="100" placeholder="Enter your address"></textarea>
+        </div>
+
+        <div>
+            <label for="country">Country: </label>
+            <input type="text" id="country" name="country" maxlength="50" placeholder="Enter your country">
+        </div>
+
+        <div>
+            <label for="state">State: </label>
+            <input type="text" id="state" name="state" maxlength="50" placeholder="Enter your state">
+        </div>
+
+        <div>
+            <label for="pin">PIN Code: </label>
+            <input type="text" id="pin" name="pin" maxlength="6" placeholder="Enter your PIN code">
+        </div>
+
+        <div>
+            <label for="city">City: </label>
+            <input type="text" id="city" name="city" maxlength="50" placeholder="Enter your city">
+        </div>
+        
+        <div>
+            <label>Hobbies: </label>
+            
+            <br><input type="checkbox" id="Drawing" name="hobbies[]" value="Drawing">
+            <label for="Drawing">Drawing</label>
+            
+            <br><input type="checkbox" id="Singing" name="hobbies[]" value="Singing">
+            <label for="Singing">Singing</label>
+            
+            <br><input type="checkbox" id="Dancing" name="hobbies[]" value="Dancing">
+            <label for="Dancing">Dancing</label>
+            
+            <br><input type="checkbox" id="otherHobbies" name="hobbies[]" value="Others">
+            <label for="otherHobby">Others</label>
+            <input type="text" id="otherHobbies" name="otherHobbies" maxlength="50" placeholder="E.g., Teaching">
+        </div>
+
+        <div>
+            <label>Qualifications: </label>
+
+            <br><input type="checkbox" id="HS10" name="qualifications" value="High School (10th)">
+            <label for="HS10">High School (10th)</label>
+            
+            <br><input type="checkbox" id="HS12" name="qualifications" value="Higher School (12th)">
+            <label for="HS12">Higher School (12th)</label>
+            
+            <br><input type="checkbox" id="UG" name="qualifications" value="Graduation (Bachelors)">
+            <label for="UG">Graduation (Bachelors)</label>
+            
+            <br><input type="checkbox" id="PG" name="qualifications" value="Post Graduation (Masters)">
+            <label for="PG">Post Graduation (Masters)</label>
+            
+            <br><input type="checkbox" id="phd" name="qualifications" value="Doctor of Philosophy (Phd)">
+            <label for="phd">Doctor of Philosophy (Phd)</label>
+        </div>
+
+        <div>
+            <label>Courses Applied For: </label>
+
+            <br><input type="checkbox" id="BCA" name="courses" value="BCA">
+            <label for="BCA">BCA (Bachelor of Computer Applications)</label>
+            
+            <br><input type="checkbox" id="BCom" name="courses" value="BCom">
+            <label for="BCom">BCom (Bachelor of Commerce)</label>
+            
+            <br><input type="checkbox" id="BSc" name="courses" value="BSc">
+            <label for="BSc">BSc (Bachelor of Science)</label>
+            
+            <br><input type="checkbox" id="BA" name="courses" value="BA">
+            <label for="BA">BA (Bachelor of Arts)</label>
+            
+            <br><input type="checkbox" id="MCA" name="courses" value="MCA">
+            <label for="MCA">MCA (Master of Computer Applications)</label>
+            
+            <br><input type="checkbox" id="MCom" name="courses" value="MCom">
+            <label for="MCom">MCom (Master of Commerce)</label>
+            
+            <br><input type="checkbox" id="MSc" name="courses" value="MSc">
+            <label for="MSc">MSc (Master of Science)</label>
+            
+            <br><input type="checkbox" id="MA" name="courses" value="MA">
+            <label for="MA">MA (Master of Arts)</label>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit" name="submit">SUBMIT</button>
+            <button type="reset">RESET</button>
+        </div>
+    </form>
+</body>
+</html>
