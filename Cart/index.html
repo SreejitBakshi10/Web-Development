@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filterInTable</title>
+</head>
+<body onload="getAllData()">
+
+    
+    <input type="text" name="userinput" id="userinput" placeholder="Enter product name...." onkeyup="filterByName()">
+
+    <div id="result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        function getAllData()
+        {
+            $.ajax({
+                url: "https://dummyjson.com/products",
+                method: "get",
+                data: {},
+                success: function(response)
+                {
+                    var products = response.products;
+
+                    var temp = "<table id='mylist'>";
+
+                    for(i=0; i<products.length; i++)
+                    {
+                        temp += "<tr>";
+                        temp += "<td>" + products[i].title + "</td>";
+                        temp += "<td>" + products[i].price + "</td>";
+                        temp += "<td><img src='" + products[i].thumbnail + "' width='20%'></td>";
+                        temp += "<td><a target='_blank' onclick='details("+ (i+1) + ")'>View More</a></td>";
+                        temp += "</tr>";
+                    }
+
+                    temp += "</table>";
+
+                    document.getElementById('result').innerHTML = temp;
+                }
+            })
+        }
+
+        function details(srl)
+        {
+           
+           localStorage.setItem("id" , srl);
+           window.location.href="description.html";
+        }
+
+        function filterByName()
+        {
+            var userinput = document.getElementById('userinput').value;
+
+            var mylist = document.getElementById('mylist');
+
+            var allTr = mylist.getElementsByTagName('tr');
+
+            for(i=0; i<allTr.length; i++)
+            {
+                var name = allTr[i].getElementsByTagName("td")[0].innerHTML;
+                var ss = name.substring(0, userinput.length);
+                
+                ss = ss.toLowerCase();
+                userinput = userinput.toLowerCase();
+
+                if(ss == userinput)
+                {
+                    allTr[i].style.display = "";
+                }
+                else{
+                    allTr[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
