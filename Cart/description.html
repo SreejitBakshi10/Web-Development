@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="display()">
+
+    <div id="output"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        function display()
+        {
+            var id = localStorage.getItem("id");
+            $.ajax({
+                url: "https://dummyjson.com/products",
+                method: "get",
+                data: {},
+                success: function(response)
+                {
+                    var product = response.products[id];
+
+                    var title = product.title;
+                    var description = product.description;
+                    var price = product.price;
+                    var discountPercentage = product.discountPercentage;
+                    var newPrice = ((100-parseFloat(discountPercentage))/100*parseFloat(price)).toFixed(2);
+                    var rating = product.rating;
+                    var stock = product.stock;
+                    var brand = product.brand;
+                    var category = product.category;
+                    var images = product.images;
+
+                    document.title = product.title;
+
+                    tmp="";
+                    tmp += "<h1>" + title + "</h1>";
+                    tmp += "<p><i>- " + description + "</i></p>";
+                    tmp += "<p><del>$" + price + "</del> <b>$" + newPrice + "</b></p>";
+                    tmp += "<p style='color:red;'>" + discountPercentage + "% discount</p>";
+                    tmp += "<p>" + rating + " STARS</p>";
+                    tmp += "<p>Availability: " + stock + "</p>";
+                    tmp += "<p>Brand: " + brand + "</p>";
+                    tmp += "<p>Category: " + category + "</p>";
+                    
+                    for(i=0;i<images.length;i++)
+                    {
+                        tmp += "<img src='" + images[i] + "' width='20%'>"
+                    }
+
+                    document.getElementById('output').innerHTML = tmp;
+                }
+            })
+        }
+    </script>
+</body>
+</html>
