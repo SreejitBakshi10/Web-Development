@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GCD</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <button onclick="performGCD();" class="btn btn-info btn-lg">LAUNCH PROGRAM</button>
+    </div>
+
+    <script>
+        function gcd(x,y)
+        {
+            if(x%y==0)
+                return y;
+            return gcd(y,x%y);
+        }
+
+        async function performGCD() {
+            let continueCalculating = true;
+            while (continueCalculating) {
+                const { value: formValues } = await Swal.fire({
+                    title: "Calculate GCD",
+                    html: `
+                        <input id="swal-input1" class="swal2-input" type="number" placeholder="Enter the first number" required>
+                        <input id="swal-input2" class="swal2-input" type="number" placeholder="Enter the second number" required>
+                        <input id="swal-input3" class="swal2-input" type="number" placeholder="Enter the third number" required>
+                    `,
+                    focusConfirm: false,
+                    preConfirm: () => {
+                        return [
+                            parseInt(document.getElementById("swal-input1").value),
+                            parseInt(document.getElementById("swal-input2").value),
+                            parseInt(document.getElementById("swal-input3").value)
+                        ];
+                    }
+                });
+
+                if (formValues.every(Number.isInteger)) {
+                    const result = gcd(gcd(formValues[0], formValues[1]), formValues[2]);
+
+                    await Swal.fire({
+                        title: `GCD of ${formValues[0]}, ${formValues[1]} and ${formValues[2]} = ${result}`,
+                        showCancelButton: true,
+                        confirmButtonText: "Perform Another Calculation",
+                        cancelButtonText: "Cancel"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            continueCalculating = true;
+                        } else {
+                            continueCalculating = false;
+                        }
+                    });
+                } else {
+                    const { value: tryAgain } = await Swal.fire({
+                        title: "Invalid Input",
+                        text: "Please enter valid integers in all three fields.",
+                        icon: "error",
+                        showCancelButton: true,
+                        confirmButtonText: "Try Again",
+                        cancelButtonText: "Cancel"
+                    });
+
+                    if (!tryAgain) {
+                        continueCalculating = false;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <script>
+        function GCD(x,y)
+        {
+            if(x%y==0)
+                return y;
+            return GCD(y,x%y);
+        }
+
+        var n1=parseInt(prompt("Enter first number"));
+        var n2=parseInt(prompt("Enter second number"));
+        var n3=parseInt(prompt("Enter third number"));
+        if(isNaN(n1) || isNaN(n2) || isNaN(n3))
+        {
+            alert("Invalid Input!\nEnter values again.")
+            location.reload();
+        }
+        else
+        document.write(`GCD of ${n1}, ${n2} and ${n3} = ${GCD(GCD(n1,n2),n3)}`);
+        //document.write("GCD of "+n1+" and "+n2+" = "+GCD(n1,n2));
+    </script> -->
