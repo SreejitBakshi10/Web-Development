@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  font-family: "Pacifico", cursive;  
+  font-style: normal;
+}
+
+.node-block {
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+  
+.node-block.current {
+    border: 4px solid #ffc107;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px 5px rgba(255,193,7,0.6);
+}
